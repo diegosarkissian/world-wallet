@@ -4,6 +4,8 @@ import PlaidLinkUS from "./PlaidLinkUS";
 import PlaidLinkES from "./PlaidLinkES";
 import PlaidLinkGB from "./PlaidLinkGB";
 
+//TODO add currency conversion API
+
 export default function Accounts({
   token,
   updateToken,
@@ -29,12 +31,10 @@ export default function Accounts({
 
   useEffect(() => {
     if (!loading && data != null) {
-      // Create deep copies for USD, EUR, and GBP
       const dataUSD = JSON.parse(JSON.stringify(data));
       const dataEUR = JSON.parse(JSON.stringify(data));
       const dataGBP = JSON.parse(JSON.stringify(data));
 
-      // Function to perform currency conversion
       const convertCurrency = (dataArray, targetCurrency) => {
         return dataArray.map((account) => {
           const copiedAccount = { ...account };
@@ -67,20 +67,16 @@ export default function Accounts({
         });
       };
 
-      // Convert each copy to the respective currency
       const fullUSD = convertCurrency(dataUSD, "USD");
       const fullEUR = convertCurrency(dataEUR, "EUR");
       const fullGBP = convertCurrency(dataGBP, "GBP");
 
-      // Set the balances based on the selected currency
       if (currency === "USD") {
-        // Filter depository and investment accounts
         const balancesUSD = fullUSD.filter(
           (account) =>
             account.type === "depository" || account.type === "investment"
         );
 
-        // Filter credit and loan accounts
         const liabilitiesUSD = fullUSD.filter(
           (account) => account.type === "credit" || account.type === "loan"
         );
@@ -88,13 +84,11 @@ export default function Accounts({
         setBalances(balancesUSD);
         setLiabilities(liabilitiesUSD);
       } else if (currency === "EUR") {
-        // Filter depository and investment accounts
         const balancesEUR = fullEUR.filter(
           (account) =>
             account.type === "depository" || account.type === "investment"
         );
 
-        // Filter credit and loan accounts
         const liabilitiesEUR = fullEUR.filter(
           (account) => account.type === "credit" || account.type === "loan"
         );
@@ -102,13 +96,11 @@ export default function Accounts({
         setBalances(balancesEUR);
         setLiabilities(liabilitiesEUR);
       } else if (currency === "GBP") {
-        // Filter depository and investment accounts
         const balancesGBP = fullGBP.filter(
           (account) =>
             account.type === "depository" || account.type === "investment"
         );
 
-        // Filter credit and loan accounts
         const liabilitiesGBP = fullGBP.filter(
           (account) => account.type === "credit" || account.type === "loan"
         );

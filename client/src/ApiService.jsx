@@ -1,7 +1,5 @@
 const BASE_URL = 'http://localhost:8080';
 
-// possible to refactor into a 'fetch factory' to reduce repetition
-
 const apiService = {};
 
 apiService.register = async (user) => {

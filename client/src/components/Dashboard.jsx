@@ -29,7 +29,7 @@ export default function Dashboard({
             path="/logout"
             element={<Logout setIsAuthenticated={setIsAuthenticated} />}
           />
-          {/* <Route path="/initial" element={}/> Add route that includes only navbar as the root path*/}
+          {/* TODO <Route path="/initial" element={}/> Add route that includes only navbar as the root path*/}
           <Route
             path="/"
             element={

@@ -22,7 +22,6 @@ const Login = (props) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // Add logic to send a request to API service /login
     const { email, password } = state;
     const user = { email, password };
     const res = await apiService.login(user);
@@ -30,7 +29,6 @@ const Login = (props) => {
       alert(`${res.message}`);
       setState(initialState);
     } else {
-      // This sets isAuthenticated = true and redirects to home
       props.setIsAuthenticated(true);
       auth.login(() => navigate('/'));
     }

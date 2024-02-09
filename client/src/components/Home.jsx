@@ -25,8 +25,10 @@ export default function Home({ isAuthenticated, currency }) {
   };
 
   useEffect(() => {
-    // Add data from authenticated user on db
+    //TODO Add data from authenticated user on db
   }, []);
+
+  //TODO add savings and graph components
 
   return (
     <>

@@ -26,7 +26,6 @@ store.on('error', (error) => {
 
 app.use(
   session({
-    // the store property, if not specified, defaults to the in-memory store
     name: 'sid',
     saveUninitialized: false,
     resave: false,
@@ -36,8 +35,7 @@ app.use(
       maxAge: 1000 * 60 * 60, // 1hr
       sameSite: true,
       httpOnly: false,
-      // we would want to set secure=true in a production environment
-      secure: false,
+      secure: false, // set to secure=true in a production environment
     },
   }),
 );

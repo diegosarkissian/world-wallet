@@ -1,0 +1,1 @@
+SESSION_SECRET = {long unique string}

@@ -24,7 +24,6 @@ const Register = (props) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // send a request to the API service /register
     const { email, password, firstName, lastName } = state;
     const user = { email, password, firstName, lastName };
     const res = await apiService.register(user);
@@ -32,7 +31,6 @@ const Register = (props) => {
       alert(`${res.message}`);
       setState(initialState);
     } else {
-      // This sets isAuthenticated = true and redirects to profile
       props.setIsAuthenticated(true);
       auth.login(() => navigate('/'));
     }

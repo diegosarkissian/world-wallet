@@ -9,9 +9,9 @@ export default function SavingsGoals() {
         </div>
         <p>Savings Goals</p>
         <ul>
-          {/* {items.map(( index) => (
+          {items.map(( index) => (
               <li key={index}>{item}</li>
-            ))} */}
+            ))}
         </ul>
       </div>
     </>

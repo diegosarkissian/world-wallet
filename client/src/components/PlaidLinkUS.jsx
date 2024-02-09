@@ -30,9 +30,7 @@ export default function PlaidLinkUS({
     [updateLoading]
   );
 
-  // Creates a Link token
   const createLinkToken = React.useCallback(async () => {
-    // For OAuth, use previously generated Link token
     if (window.location.href.includes("?oauth_state_id=")) {
       const linkToken = localStorage.getItem("link_token");
       setToken(linkToken);
@@ -44,7 +42,6 @@ export default function PlaidLinkUS({
     }
   }, []);
 
-  // Fetch balance data
   const getBalance = React.useCallback(async () => {
     updateLoading(true);
     const response = await fetch("http://localhost:8080/api/balance", {
@@ -63,7 +60,6 @@ export default function PlaidLinkUS({
     onSuccess,
   };
 
-  // For OAuth, configure the received redirect URI
   if (window.location.href.includes("?oauth_state_id=")) {
     config.receivedRedirectUri = window.location.href;
     isOauth = true;
