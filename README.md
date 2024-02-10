@@ -1,6 +1,7 @@
 # worldwallet
 Financial tracker that connects your global bank accounts and displays your finances in real time.
 
+
 ## Idea
 I've had the opportunity to live in 5 countries during my life, and I've opened bank accounts in each of these countries. Keeping track of my finances in one country is already difficult, but keeping track of my global finances has been a true challenge.
 
@@ -13,6 +14,7 @@ This is what sets worldwallet apart:
 * 🌎 global access to financial data
 * 💸 live currency conversion
 
+
 ## Description
 ![Screenshot of worldwallet's dashboard showing mock financial data](./client/assets/dashboard-image.png)
 
@@ -22,12 +24,13 @@ The dashboard shows all your global balances and liabilities in separate lists. 
 
 The app uses Plaid (a security-first API service that authenticates financial information) to retrieve and update the financial data displayed on the dashboard.
 
-Supported countries: 🇺🇸 Unites States, 🇪🇸 Spain and the 🇬🇧 United Kingdom.
+**Supported countries:** 🇺🇸 Unites States, 🇪🇸 Spain and the 🇬🇧 United Kingdom.
 
-Note: 
+**Note:** 
 1) to connect to your real bank accounts' balances and liablilites data, you MUST pay for the Plaid API.
 2) not all countries offer access to balances and liablities data, check Plaid's website for more information: https://plaid.com/en-gb/global/
-3) in the app, only the US bank accounts offer LIABILITY information. But US, Spain, and UK bank accounts offer BALANCES data. 
+3) only US bank accounts offer LIABILITY information. But US, Spain, and UK bank accounts offer BALANCES data. 
+
 
 ## Technologies
 * [React](https://reactjs.org/)
@@ -35,6 +38,7 @@ Note:
 * [MongoDB](https://www.mongodb.com/)
 * [Mongoose](https://mongoosejs.com/)
 * [Plaid](https://plaid.com/en-gb/)
+
 
 ## Getting started
 
@@ -48,7 +52,7 @@ Note:
 git clone https://github.com/diegoss-github/world-wallet.git
 ```
 
-3) Install dependencies
+3) Install dependencies\
 Client folder:
 ```
 npm install
