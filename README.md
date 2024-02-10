@@ -14,6 +14,8 @@ This is what sets worldwallet apart:
 * 💸 live currency conversion
 
 ## Description
+![Screenshot of worldwallet's dashboard showing mock financial data](./client/assets/dashboard-image.png)
+
 worldwallet is a networth tracker for the global nomad. It connects to your bank accounts in different countries, and shows your combined balances and liabilities.
 
 The dashboard shows all your global balances and liabilities in separate lists. You are also able to see your total networth.
@@ -43,23 +45,23 @@ Note:
 
 2) Clone the repository
 ```
-> git clone https://github.com/diegoss-github/world-wallet.git
+git clone https://github.com/diegoss-github/world-wallet.git
 ```
 
 3) Install dependencies
 Client folder:
 ```
-> npm install
+npm install
 ```
 
 Server folder:
 ```
-> npm install
+npm install
 ```
 
 4) Configure your environment
 ```
-> cp server/.env.example server/.env
+cp server/.env.example server/.env
 # Edit server/.env
 # 1. PLAID_ENV sandbox is for test usage. Change to development to access real bank accounts.
 # 2. for SESSION_SECRET input a long unique string.
@@ -68,8 +70,8 @@ Server folder:
 5) Run the project
 ```
 # Starts the client
-> npm run dev
+npm run dev
 
 # Starts the server
-> npm run dev
+npm run dev
 ```
