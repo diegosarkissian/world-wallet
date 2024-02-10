@@ -14,11 +14,13 @@ This is what sets worldwallet apart:
 * 💸 live currency conversion
 
 ## Description
-worldwallet is a networth tracker for the global nomad. It connects to your bank accounts in different countries, and shows your combined balances and liabilities (currently supporting Unites States, Spain and the United Kingdom).
+worldwallet is a networth tracker for the global nomad. It connects to your bank accounts in different countries, and shows your combined balances and liabilities.
 
 The dashboard shows all your global balances and liabilities in separate lists. You are also able to see your total networth.
 
 The app uses Plaid (a security-first API service that authenticates financial information) to retrieve and update the financial data displayed on the dashboard.
+
+Supported countries: 🇺🇸 Unites States, 🇪🇸 Spain and the 🇬🇧 United Kingdom.
 
 Note: 
 1) to connect to your real bank accounts' balances and liablilites data, you MUST pay for the Plaid API.
@@ -40,24 +42,34 @@ Note:
 * get your PLAID CLIENT ID and PLAID SECRET, follow the instructions on their website: https://www.mongodb.com/docs/v7.0/administration/install-community/
 
 2) Clone the repository
+```
 > git clone https://github.com/diegoss-github/world-wallet.git
+```
 
 3) Install dependencies
 Client folder:
+```
 > npm install
+```
 
 Server folder:
+```
 > npm install
+```
 
 4) Configure your environment
+```
 > cp server/.env.example server/.env
 # Edit server/.env
 # 1. PLAID_ENV sandbox is for test usage. Change to development to access real bank accounts.
 # 2. for SESSION_SECRET input a long unique string.
+```
 
-Run the project
+5) Run the project
+```
 # Starts the client
 > npm run dev
 
 # Starts the server
 > npm run dev
+```
